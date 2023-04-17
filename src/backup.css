@@ -1,0 +1,125 @@
+
+/* Sidebar */
+.sidebar{
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  background: rgb(28, 9, 0);
+  box-shadow: 0 10px 15px 5px rgb(45, 13, 0);
+  transition: 0.5s;
+}
+.sidebar .brand-logo{
+  text-align: center;
+  color: orangered;
+  padding: 20px 0;
+}
+.sidebar .nav{
+  position: relative;
+}
+.sidebar .nav .nav-item{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 20px;
+  transition: 0.5s;
+  text-decoration: none;
+  color: white;
+}
+.sidebar .nav .nav-item h6{
+  font-size: 17px;
+  font-weight: 400;
+  display: block;
+}
+.sidebar .nav .nav-item:hover h6{
+  transform: translateX(10px);
+}
+.sidebar .nav .nav-item.active {
+  border-right: 5px solid rgb(255, 255, 255);
+  background: orangered;
+}
+.sidebar .nav .nav-item.active:hover h6{
+  transform: translateX(0);
+}
+/* Sidebar Collapsed */
+.sidebar-collapsed{
+  width: 60px;
+}
+.sidebar.sidebar-collapsed .nav .nav-item h6{
+  display: none;
+}
+
+/* Main */
+.main{
+  margin-left: 300px;
+  width: 100%;
+  transition: 0.5s;
+}
+
+/* Main Expanded */
+.main-expanded{
+  margin-left: 60px;
+}
+
+/* Header */
+header{
+  padding: 20px 30px;
+  background: rgb(28, 9, 0);
+  display: block;
+  color: white;
+  font-size: 25px;
+  box-shadow: 10px 0px 15px 5px rgb(27, 27, 27)
+}
+
+header .left{
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  align-items: center;
+}
+header .left button{
+  background:transparent;
+  color: white;
+  border: none;
+  font-size: 20px;
+  display: flex;
+  cursor: pointer;
+}
+.close{
+  display: none;
+  cursor: pointer;
+}
+
+@media(max-width:991px){
+.sidebar{
+  width: 300px;
+}
+.sidebar-collapsed{
+  width: 0;
+}.sidebar .nav .nav-item svg{
+  width: 30px;
+  margin: auto;
+}
+.sidebar-collapsed .nav .nav-item.active {
+  border-right: none;
+  background: none;
+}
+.main{
+  margin-left: 0;
+}
+.close{
+  display: block;
+}
+.close button {
+    border: 2px solid white;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: none;
+    color: white;
+    font-size: 15px;
+}
+}

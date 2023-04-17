@@ -1,0 +1,132 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --body-color:rgb(0, 15, 29);
+  --sidebar-color:rgb(0, 23, 46);
+  --text-light:#ffffff;
+  --dark-text:rgb(0, 128, 255);
+}
+body{
+  font-family: 'Roboto',sans-serif;
+  background: var(--body-color);
+  color: var(--text-light);
+}
+.dashboard{
+  display: flex;
+}
+.sidebar{
+  width: 300px;
+  position: fixed;
+  height: 100vh;
+  background-color: var(--sidebar-color);
+  transition: all 0.5s ease;
+  overflow-y: scroll;
+  
+}
+.sidebar::-webkit-scrollbar {
+    background-color: transparent;
+    width: 0;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+.main{
+  margin-left: 300px;
+  transition: all 0.5s ease;
+}
+.close{
+  display: none;
+}
+
+.logo{
+  position: sticky;
+  top:0;
+  left: 0;
+  background: var(--sidebar-color);
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--dark-text);
+  margin-bottom: 20px;
+}
+.logo h4{
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--dark-text);
+}
+
+.nav .nav-item{
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 15px 20px;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-light);
+  transition: 0.5s;
+
+}
+.nav .nav-item.active{
+  background:var(--dark-text);
+  border-right: 4px solid white;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.sidebar-collapsed{
+  transition: 0.7s;
+  width: 70px;
+}
+.sidebar-collapsed .nav .nav-item svg{
+  width: 40px;
+}
+.main-expanded{
+  margin-left: 70px;
+}
+
+@media (max-width:991px){
+  .close{
+    display: block;
+  }
+  .close button{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid var(--dark-text);
+    background:transparent;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+  }
+  .close button svg path{
+    stroke: var(--dark-text);
+  }
+  .sidebar-collapsed{
+    transform: translateX(-300px);
+  }
+  .main-expanded{
+    margin-left: 0;
+  }
+  .sidebar{
+    z-index: 10;
+  }
+  .main{
+    margin-left: 0;
+    position: relative;
+    z-index: 9;
+  }
+  .nav .nav-item{
+    
+}
+
+}
