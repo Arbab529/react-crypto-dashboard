@@ -23,9 +23,10 @@ body{
   position: fixed;
   top:0;
   height: 100vh;
-  background: linear-gradient(to right , rgba(255, 0, 177, 0.19),rgba(0, 133, 255, 0.19));;
+  background: linear-gradient(to right , rgba(255, 0, 177, 0.19),rgba(0, 133, 255, 0.19));
   transition: all 0.5s ease;
   overflow-y: scroll;
+  z-index: 2;
   
 }
 .sidebar::-webkit-scrollbar {
@@ -95,12 +96,16 @@ body{
 /* Header */
 
 header{
-   background: linear-gradient(to right , rgba(0, 133, 255, 0.19),rgba(255, 0, 177, 0.19));
+   background: rgb(0, 23, 46);
    padding: 23px 30px;
    display: flex;
    justify-content: space-between;
    align-items: center;
-     border-bottom: 1px solid rgb(0, 70, 139);
+  border-bottom: 1px solid rgb(0, 70, 139);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index:1;
 }
 header .left{
    display: flex;
@@ -118,7 +123,78 @@ header .left .toggle-btn svg{
   color: white;
 }
 
-@media(max-width:991px){
+/* Home Page */
+/* Crypto Price Card */
+.crypto-card{
+  padding: 20px;
+  background: linear-gradient(to bottom , rgba(0, 133, 255, 0.19),rgba(255, 0, 177, 0.19));
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.4px);
+  -webkit-backdrop-filter: blur(8.4px);
+  border: 1px solid rgba(255, 0, 177, 0.34);
+  position: relative;
+  z-index: -1;
+}
+
+.coin-image{
+  width: 50px;
+  height: 50px;
+}
+.coin-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.news-image{
+  width: 100%;
+  background: rgb(0, 23, 46);
+  padding: 20px;
+  border-radius: 20px;
+ height: 300px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ position: relative;
+ z-index:0;
+}
+.news-image::after{
+  content: 'OUR COIN';
+  position: absolute;
+  top: 50%;
+  left:-50px;
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(15, 33, 63);
+  transform: translateY(-50%) rotate(-90deg);
+  z-index: -1;
+  margin: 0;
+  padding: 0;
+}
+.news-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* credit-card */
+.credit-card{
+ background: linear-gradient(to bottom , rgba(0, 133, 255, 0.19),rgba(255, 0, 177, 0.19));
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.4px);
+  -webkit-backdrop-filter: blur(8.4px);
+  border: 1px solid rgba(255, 0, 177, 0.34);
+  display: inline-block;
+  padding: 30px 50px;
+  width: 500px;
+}
+
+
+@media(max-width:1100px){
+  .credit-card{
+    width: 100%;
+  }
   .sidebar{
     margin-left:-300px;
     background: var(--body-color);
@@ -162,3 +238,28 @@ header .left .toggle-btn svg{
     stroke-width: 4px;
    }
 }
+
+
+@media(max-width:680px){
+  .credit-card .card-number{
+    font-size:22px;
+  }
+  .credit-card .card-holder,.credit-card .card-security{
+    font-size:18px;
+  }
+}
+
+@media(max-width:420px){
+  .card-user{
+    flex-direction: column;
+  }
+  .credit-card .card-number{
+    text-align: center;
+    font-size: 20px;
+  }
+  .credit-card .card-holder,.credit-card .card-security{
+    font-size:16px;
+  }
+}
+
+

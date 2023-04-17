@@ -39,39 +39,6 @@ const Sidebar = ({ children, ...rest }) => {
                         <ImHome />
                         <Typography variant="h6" style={{ fontSize: "17px", fontWeight: "400" }}>Trading</Typography>
                     </NavLink>
-                    {/*  */}
-                    <NavLink to='' className="nav-item">
-                        <ImHome />
-                        <Typography variant="h6" style={{ fontSize: "17px", fontWeight: "400" }}>Trading</Typography>
-                    </NavLink>
-                    <NavLink to='' className="nav-item">
-                        <ImHome />
-                        <Typography variant="h6" style={{ fontSize: "17px", fontWeight: "400" }}>Trading</Typography>
-                    </NavLink>
-                    <NavLink to='' className="nav-item">
-                        <ImHome />
-                        <Typography variant="h6" style={{ fontSize: "17px", fontWeight: "400" }}>Trading</Typography>
-                    </NavLink>
-                    <NavLink to='' className="nav-item">
-                        <ImHome />
-                        <Typography variant="h6" style={{ fontSize: "17px", fontWeight: "400" }}>Trading</Typography>
-                    </NavLink>
-                    <NavLink to='' className="nav-item">
-                        <ImHome />
-                        <Typography variant="h6" style={{ fontSize: "17px", fontWeight: "400" }}>Trading</Typography>
-                    </NavLink>
-                    <NavLink to='' className="nav-item">
-                        <ImHome />
-                        <Typography variant="h6" style={{ fontSize: "17px", fontWeight: "400" }}>Trading</Typography>
-                    </NavLink>
-                    <NavLink to='' className="nav-item">
-                        <ImHome />
-                        <Typography variant="h6" style={{ fontSize: "17px", fontWeight: "400" }}>Trading</Typography>
-                    </NavLink>
-                    <NavLink to='' className="nav-item">
-                        <ImHome />
-                        <Typography variant="h6" style={{ fontSize: "17px", fontWeight: "400" }}>Trading</Typography>
-                    </NavLink>
                 </nav>
 
             </div>
