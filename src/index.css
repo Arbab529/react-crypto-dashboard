@@ -96,7 +96,7 @@ body{
 
 header{
    background: linear-gradient(to right , rgba(0, 133, 255, 0.19),rgba(255, 0, 177, 0.19));
-   padding: 23px 40px;
+   padding: 23px 30px;
    display: flex;
    justify-content: space-between;
    align-items: center;
