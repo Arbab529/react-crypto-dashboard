@@ -9,13 +9,13 @@ const Header = ({ toggle, setToggle }) => {
     return (
         <header>
             <div className="left">
-                <button onClick={handleToggle} >
+                <button onClick={handleToggle} className='toggle-btn'>
                     <FaBars />
                 </button>
                 <Typography variant="h5" style={{ fontSize: "28px", fontWeight: "bold" }}>Dashboard</Typography>
             </div>
             <div className="right">
-
+                <Typography variant="h5" style={{ fontSize: "28px", fontWeight: "bold" }}>Arbab</Typography>
             </div>
         </header>
     )

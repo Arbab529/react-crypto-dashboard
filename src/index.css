@@ -21,8 +21,9 @@ body{
 .sidebar{
   width: 300px;
   position: fixed;
+  top:0;
   height: 100vh;
-  background-color: var(--sidebar-color);
+  background: linear-gradient(to right , rgba(255, 0, 177, 0.19),rgba(0, 133, 255, 0.19));;
   transition: all 0.5s ease;
   overflow-y: scroll;
   
@@ -31,102 +32,133 @@ body{
     background-color: transparent;
     width: 0;
 }
-
 .sidebar::-webkit-scrollbar-thumb {
     background-color: transparent;
 }
 .main{
   margin-left: 300px;
-  transition: all 0.5s ease;
+  transition: 0.5s;
+  width: 100%;
+}
+.dashboard-content{
+  padding: 30px;
+}
+.sidebar.show{
+  width: 60px;
+}
+.main.main-expanded{
+  margin-left: 60px
+}
+.mobile-logo{
+  display: none;
+}
+.desktop-logo{
+  display: block;
 }
 .close{
   display: none;
 }
 
-.logo{
-  position: sticky;
-  top:0;
-  left: 0;
-  background: var(--sidebar-color);
+/* Sidebar */
+.sidebar .logo{
   text-align: center;
   padding: 20px 0;
-  border-bottom: 1px solid var(--dark-text);
-  margin-bottom: 20px;
-}
-.logo h4{
-  font-weight: bold;
-  text-transform: uppercase;
-  color: var(--dark-text);
+  border-bottom: 1px solid rgb(0, 70, 139);
 }
 
-.nav .nav-item{
+.sidebar .nav .nav-item{
   display: flex;
-  justify-content: flex-start;
-  gap: 20px;
-  padding: 15px 20px;
+  padding: 20px;
   align-items: center;
+  gap: 20px;
   text-decoration: none;
-  color: var(--text-light);
-  transition: 0.5s;
-
+  color: white;
+  overflow: hidden;
 }
-.nav .nav-item.active{
-  background:var(--dark-text);
-  border-right: 4px solid white;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
+.sidebar .nav .nav-item:hover.active::after{
+  right: 0;
 }
 
-.sidebar-collapsed{
-  transition: 0.7s;
-  width: 70px;
+.sidebar .nav .nav-item.active{
+    background: rgba(6, 136, 255, 0.17);
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+    background: linear-gradient(to right , rgba(0, 133, 255, 0.19),rgba(255, 0, 177, 0.19));
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.3px);
+    -webkit-backdrop-filter: blur(7.3px);
 }
-.sidebar-collapsed .nav .nav-item svg{
-  width: 40px;
-}
-.main-expanded{
-  margin-left: 70px;
+.sidebar.show .nav .nav-item h6{
+  display: none;
 }
 
-@media (max-width:991px){
+/* Header */
+
+header{
+   background: linear-gradient(to right , rgba(0, 133, 255, 0.19),rgba(255, 0, 177, 0.19));
+   padding: 23px 40px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+     border-bottom: 1px solid rgb(0, 70, 139);
+}
+header .left{
+   display: flex;
+   align-items: center;
+   gap: 20px;
+}
+header .left .toggle-btn {
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
+header .left .toggle-btn svg{
+  font-size: 20px;
+  color: white;
+}
+
+@media(max-width:991px){
+  .sidebar{
+    margin-left:-300px;
+    background: var(--body-color);
+  }
+  .sidebar.show{
+      margin-left: 0;
+      width: 300px;
+  }
+  .sidebar.show .nav .nav-item h6{
+  display: block;
+}
+  .main,.main.main-expanded{
+    margin-left:0
+  }
+  .mobile-logo{
+    display: block;
+  }
+  .desktop-logo{
+    display: none;
+  }
   .close{
     display: block;
   }
   .close button{
     position: absolute;
-    top: 15px;
-    left: 15px;
-    width: 35px;
-    height: 35px;
+    top: 25px;
+    left: 25px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    color: white;
+    border: 2px solid white;
     border-radius: 50%;
-    border: 2px solid var(--dark-text);
-    background:transparent;
-    font-size: 18px;
-    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 11;
+    cursor: pointer;
   }
-  .close button svg path{
-    stroke: var(--dark-text);
-  }
-  .sidebar-collapsed{
-    transform: translateX(-300px);
-  }
-  .main-expanded{
-    margin-left: 0;
-  }
-  .sidebar{
-    z-index: 10;
-  }
-  .main{
-    margin-left: 0;
-    position: relative;
-    z-index: 9;
-  }
-  .nav .nav-item{
-    
-}
-
+   .close button svg path{
+    stroke: white;
+    stroke-width: 4px;
+   }
 }
