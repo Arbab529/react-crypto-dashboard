@@ -127,7 +127,7 @@ header .left .toggle-btn svg{
 /* Crypto Price Card */
 .crypto-card{
   padding: 20px;
-  background: linear-gradient(to bottom , rgba(0, 133, 255, 0.19),rgba(255, 0, 177, 0.19));
+  /* background: linear-gradient(to bottom , rgba(0, 133, 255, 0.19),rgba(255, 0, 177, 0.19)); */
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(8.4px);
@@ -135,6 +135,7 @@ header .left .toggle-btn svg{
   border: 1px solid rgba(255, 0, 177, 0.34);
   position: relative;
   z-index: -1;
+  background: rgb(0, 23, 46);
 }
 
 .coin-image{
