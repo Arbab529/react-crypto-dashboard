@@ -11,11 +11,11 @@ const Card = ({ children, ...rest }) => {
                     <img src={coinImg} alt="" />
                     <Typography variant="h6">{children}</Typography>
                 </Box>
-                <Box>
+                {/* <Box>
                     {graph === "up" ?
                         <BsGraphUpArrow style={{ color: "#03CF23", fontSize: "27px" }} /> :
                         <BsGraphDownArrow style={{ color: "red", fontSize: "27px" }} />}
-                </Box>
+                </Box> */}
             </Box>
             <Box>
                 <Typography variant="h5" sx={{ marginBottom: "15px" }} >$34.850,10</Typography>

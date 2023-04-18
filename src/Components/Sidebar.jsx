@@ -4,6 +4,7 @@ import Header from './Header'
 import { Box, Typography } from '@mui/material'
 import { ImHome } from 'react-icons/im'
 import { GrClose } from 'react-icons/gr'
+import { BsBarChartSteps } from 'react-icons/bs'
 
 const Sidebar = ({ children, ...rest }) => {
     const [toggle, setToggle] = useState(false);
@@ -27,7 +28,11 @@ const Sidebar = ({ children, ...rest }) => {
                         <ImHome />
                         <Typography variant="h6" style={{ fontSize: "17px", fontWeight: "400" }}>Home</Typography>
                     </NavLink>
-                    <NavLink to='/portfolio' className="nav-item">
+                    <NavLink to='/charts' className="nav-item">
+                        <BsBarChartSteps />
+                        <Typography variant="h6" style={{ fontSize: "17px", fontWeight: "400" }}>Charts</Typography>
+                    </NavLink>
+                    {/* <NavLink to='/portfolio' className="nav-item">
                         <ImHome />
                         <Typography variant="h6" style={{ fontSize: "17px", fontWeight: "400" }}>Portfolio</Typography>
                     </NavLink>
@@ -38,7 +43,7 @@ const Sidebar = ({ children, ...rest }) => {
                     <NavLink to='/trading' className="nav-item">
                         <ImHome />
                         <Typography variant="h6" style={{ fontSize: "17px", fontWeight: "400" }}>Trading</Typography>
-                    </NavLink>
+                    </NavLink> */}
                 </nav>
 
             </div>
