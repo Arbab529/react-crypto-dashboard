@@ -5,6 +5,7 @@ import { Box, Typography } from '@mui/material'
 import { ImHome } from 'react-icons/im'
 import { GrClose } from 'react-icons/gr'
 import { BsBarChartSteps } from 'react-icons/bs'
+import { MdOutlineCandlestickChart } from 'react-icons/md'
 
 const Sidebar = ({ children, ...rest }) => {
     const [toggle, setToggle] = useState(false);
@@ -31,6 +32,10 @@ const Sidebar = ({ children, ...rest }) => {
                     <NavLink to='/charts' className="nav-item">
                         <BsBarChartSteps />
                         <Typography variant="h6" style={{ fontSize: "17px", fontWeight: "400" }}>Charts</Typography>
+                    </NavLink>
+                    <NavLink to='/tradingview' className="nav-item">
+                        <MdOutlineCandlestickChart />
+                        <Typography variant="h6" style={{ fontSize: "17px", fontWeight: "400" }}>Trading View</Typography>
                     </NavLink>
                     {/* <NavLink to='/portfolio' className="nav-item">
                         <ImHome />

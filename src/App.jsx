@@ -6,6 +6,7 @@ import Portfolio from './Pages/Portfolio'
 import News from './Pages/News'
 import Trading from './Pages/Trading'
 import Charts from './Pages/Charts'
+import TradingViewWidget from './Components/charts/TradingViewWidget'
 
 const App = () => {
   return (
@@ -16,7 +17,7 @@ const App = () => {
         <Route path='/portfolio' element={<Portfolio />} />
         <Route path='/news' element={<News />} />
         <Route path='/news/:id' element={<News />} />
-        <Route path='/trading' element={<Trading />} />
+        <Route path='/tradingview' element={<TradingViewWidget />} />
       </Routes>
     </Sidebar>
   )

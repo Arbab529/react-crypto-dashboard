@@ -208,6 +208,9 @@ background: linear-gradient(to bottom, rgba(0, 133, 255, 0.19), rgba(255, 0, 177
     background: white;
     color: black;
 }
+.apexcharts-toolbar{
+  z-index: 0!important;
+}
 @media (max-width:1280px) {
   .credit-card .card-number{
     font-size:22px;
@@ -291,5 +294,10 @@ background: linear-gradient(to bottom, rgba(0, 133, 255, 0.19), rgba(255, 0, 177
     font-size:14px;
   }
 }
+
+.tdtHW{
+  background-color: red;
+}
+
 
 

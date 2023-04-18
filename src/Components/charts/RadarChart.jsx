@@ -4,7 +4,8 @@ import Chart from "react-apexcharts";
 
 const data = {
     options: {
-        colors: ['rgba(0, 133, 255, 0.4)', 'rgba(255, 0, 177, 0.5)'],
+        // colors: ['rgba(0, 133, 255, 0.4)', 'rgba(255, 0, 177, 0.5)'],
+        colors: ['green', 'red'],
         chart: {
             id: "basic-bar"
         },

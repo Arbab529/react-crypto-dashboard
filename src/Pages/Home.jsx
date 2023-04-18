@@ -9,6 +9,8 @@ import CreditCard from '../Components/CreditCard'
 import { BiShow, BiHide } from 'react-icons/bi'
 import CustomChart from '../Components/charts/Chart'
 import CandleChart from '../Components/charts/CandleChart'
+import RadarChart from '../Components/charts/RadarChart'
+import TradingViewWidget from '../Components/charts/TradingViewWidget'
 
 const Home = () => {
     return (
@@ -40,7 +42,9 @@ const Home = () => {
                             </Grid>
 
                             <Grid item xs={12} lg={6}>
-                                <CandleChart />
+                                {/* <CandleChart /> */}
+                                <RadarChart />
+                                {/* <TradingViewWidget screen="home" /> */}
                             </Grid>
                             <Grid item xs={12} lg={6}>
                                 <CustomChart />

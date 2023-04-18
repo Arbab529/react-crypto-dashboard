@@ -3,6 +3,7 @@ import React from 'react'
 import CandleChart from '../Components/charts/CandleChart'
 import CustomChart from '../Components/charts/Chart'
 import RadarChart from '../Components/charts/RadarChart'
+import Draggable from 'react-draggable';
 
 const Charts = () => {
     return (
